@@ -2,7 +2,7 @@
 
 This project is a [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-![](./images/screenshot.png)
+![](./images/calc.png)
 
 ## The challenge
 
