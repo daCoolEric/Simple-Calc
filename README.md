@@ -1,6 +1,6 @@
-# Frontend Mentor - Calculator app solution
+# Dacooleric-Calc
 
-This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This project is a [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ![](./images/screenshot.png)
 
@@ -15,8 +15,7 @@ Users should be able to:
 
 ## Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/calculator-app-VMtKqPRzi)
-- [Live Site URL](https://calculator-app-developingweb.vercel.app)
+- [Live Site URL](https://dacooleric-calc.netlify.app/)
 
 ## My process
 
@@ -30,4 +29,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@developingWeb](https://www.frontendmentor.io/profile/developingWeb)
+- Eric Kodzo Ayi alias Dacooleric - [@developingWeb](https://dacooleric.netlify.app/)
