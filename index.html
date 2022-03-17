@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- js -->
+    <script defer src="js/script.js"></script>
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body data-theme="theme-1">
+    <div class="header">
+      <p class="calc-heading">Calc</p>
+
+      <div class="toggle-btn-container">
+        <div class="theme-num-container">
+          <p id="theme-1">1</p>
+          <p id="theme-2">2</p>
+          <p id="theme-3">3</p>
+        </div>
+        <div class="toggle-switch-container">
+          <p>theme</p>
+
+          <div class="switch-toggle">
+            <div class="theme-btn theme-btn-1"></div>
+            <div class="theme-1-area theme-toggle"></div>
+            <div class="theme-2-area theme-toggle"></div>
+            <div class="theme-3-area theme-toggle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen-container">
+      <div class="previous-operand-screen"></div>
+      <div class="current-operand-screen">0</div>
+    </div>
+
+    <div class="calc-body">
+      <button class="number-btn">7</button>
+      <button class="number-btn">8</button>
+      <button class="number-btn">9</button>
+      <button class="delete-btn">del</button>
+      <button class="number-btn">4</button>
+      <button class="number-btn">5</button>
+      <button class="number-btn">6</button>
+      <button class="operand-btn">+</button>
+      <button class="number-btn">1</button>
+      <button class="number-btn">2</button>
+      <button class="number-btn">3</button>
+      <button class="operand-btn">-</button>
+      <button class="decimal-btn">.</button>
+      <button class="number-btn">0</button>
+      <button class="operand-btn">/</button>
+      <button class="operand-btn">*</button>
+      <button class="reset-btn">reset</button>
+      <button class="result-btn">=</button>
+    </div>
+
+    <div class="pop-up">
+      <h3>New Feature</h3>
+      <ul>
+        <li>You can now use the calculator with keyboard also.</li>
+        <li>
+          To use multiply operator :
+          <ul>
+            <li>click 'x' key or</li>
+            <li>use * symbol from numpad</li>
+          </ul>
+        </li>
+        <li>
+          To reset :
+          <ul>
+            <li>Use shortcut shift + del</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

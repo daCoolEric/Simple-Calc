@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@600;700;800&display=swap");
+
+:root {
+  /******** theme 1 ********/
+
+  /* backgrounds */
+  --very-dark-desaturated-blue-main: hsl(222, 26%, 31%); /*main background*/
+  --very-dark-desaturated-blue: hsl(
+    223,
+    31%,
+    20%
+  ); /*toggle background, keypad background*/
+  --very-dark-desaturated-blue-screen: hsl(224, 36%, 15%); /*screen background*/
+
+  /* keys */
+  --desaturated-dark-blue-key-background: hsl(225, 21%, 49%); /*key background*/
+  --desaturated-dark-blue: hsl(224, 28%, 35%); /*key shadow*/
+  --red: hsl(6, 63%, 50%); /*key background, toggle*/
+  --dark-red: hsl(6, 70%, 34%); /*key shadow*/
+  --light-grayish-orange: hsl(30, 25%, 89%); /*key background*/
+  --grayish-orange: hsl(28, 16%, 65%); /*key shadow*/
+
+  /* text */
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
+
+  /******** theme 2 ********/
+
+  /* backgrounds */
+  --light-gray: hsl(0, 0%, 90%); /*main background*/
+  --grayish-red: hsl(0, 5%, 81%); /*toggle background, keypad background*/
+  --very-light-gray: hsl(0, 0%, 93%); /*screen background*/
+
+  /* keys */
+  --dark-moderate-cyan: hsl(185, 42%, 37%); /*key background*/
+  --very-dark-cyan: hsl(185, 58%, 25%); /*key shadow*/
+  --Orange: hsl(25, 98%, 40%); /*key background, toggle*/
+  --dark-orange: hsl(25, 99%, 27%); /*key shadow*/
+  --light-grayish-yellow: hsl(45, 7%, 89%); /*key background*/
+  --dark-grayish-orange: hsl(35, 11%, 61%); /*key shadow*/
+
+  /* text */
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+  /******** theme 3 ********/
+
+  /* backgrounds */
+  --very-dark-violet-main: hsl(268, 75%, 9%); /*main background*/
+  --very-dark-violet: hsl(
+    268,
+    71%,
+    12%
+  ); /*toggle background, keypad background, screen background*/
+
+  /* keys */
+  --dark-violet: hsl(281, 89%, 26%); /*key background*/
+  --vivid-magenta: hsl(285, 91%, 52%); /*key shadow*/
+  --pure-cyan: hsl(176, 100%, 44%); /*key background, toggle*/
+  --soft-cyan: hsl(177, 92%, 70%); /*key shadow*/
+  --very-dark-violet-key: hsl(268, 47%, 21%); /*key background*/
+  --dark-magenta-key-shadow-3: hsl(290, 70%, 36%); /*key shadow*/
+
+  /* text */
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--very-dark-desaturated-blue-main);
+}
+
+/**************header***************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 550px;
+}
+
+.calc-heading {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.toggle-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.theme-num-container {
+  cursor: pointer;
+}
+.theme-num-container p {
+  color: var(--white);
+  font-weight: 700;
+  display: inline;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.toggle-switch-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 160px;
+  margin-top: 5px;
+}
+
+.toggle-switch-container p {
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/**************toggle switch************/
+.switch-toggle {
+  background: var(--very-dark-desaturated-blue);
+  border-radius: 50px;
+  width: 75px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.theme-btn {
+  position: absolute;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.theme-btn-1 {
+  left: 5px;
+  background: var(--red);
+}
+.theme-btn-2 {
+  background: var(--Orange);
+  left: 30px;
+}
+.theme-btn-3 {
+  background: var(--pure-cyan);
+  left: 55px;
+}
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+.theme-1-area {
+  left: 0;
+  border-radius: 50% 0 0 50%;
+}
+.theme-2-area {
+  left: 25px;
+}
+.theme-3-area {
+  left: 50px;
+  border-radius: 0 50% 50% 0;
+}
+
+/********************* screen *****************/
+.screen-container {
+  margin: 30px 0 30px;
+}
+.previous-operand-screen,
+.current-operand-screen {
+  width: 550px;
+  background: var(--very-dark-desaturated-blue-screen);
+  color: var(--white);
+  font-weight: 700;
+  text-align: end;
+  overflow-x: hidden;
+}
+.previous-operand-screen {
+  border-radius: 10px 10px 0 0;
+  font-size: 20px;
+  padding: 20px 30px 0;
+}
+.current-operand-screen {
+  font-size: 54px;
+  padding: 20px 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+/******************* calc body *******************/
+.calc-body {
+  background: var(--very-dark-desaturated-blue);
+  width: 550px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 20.6% 20.6% 20.6% 20.6%;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 25px;
+  border-radius: 10px;
+}
+
+.calc-body button {
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 15px 10px 10px;
+  border-radius: 10px;
+  outline: none;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.number-btn,
+.operand-btn,
+.decimal-btn {
+  background: var(--light-grayish-orange);
+  color: var(--very-dark-grayish-blue);
+  box-shadow: 0 5px 0 var(--grayish-orange);
+}
+
+.delete-btn,
+.reset-btn {
+  padding: 23px 0 17px !important;
+  background: var(--desaturated-dark-blue-key-background);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  box-shadow: 0 5px 0 var(--desaturated-dark-blue);
+}
+.reset-btn {
+  grid-column: 1 / span 2;
+}
+.result-btn {
+  grid-column: 3 / span 2;
+  background: var(--red);
+  color: var(--white);
+  font-size: 20px !important;
+  box-shadow: 0 5px 0 var(--dark-red);
+}
+button:active {
+  transform: translateY(2px);
+}
+
+/********* pop up **********/
+.pop-up {
+  width: 400px;
+  position: fixed;
+  bottom: -1000px;
+  right: 40px;
+  padding: 40px;
+  background: rgba(240, 240, 240, 0.8);
+  border-radius: 10px;
+  transition: 1s;
+}
+.active {
+  bottom: 40px !important;
+}
+.pop-up h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.pop-up > ul > li {
+  line-height: 1.6;
+  color: rgb(12, 12, 12);
+}
+.pop-up > ul > li:last-child {
+  margin-top: 10px;
+}
+.pop-up ul li li {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+/****************** theme 2 ********************/
+[data-theme="theme-2"] {
+  background: var(--light-gray);
+}
+
+[data-theme="theme-2"] .calc-heading {
+  color: var(--very-dark-grayish-yellow);
+}
+
+[data-theme="theme-2"] .theme-num-container p {
+  color: var(--very-dark-grayish-yellow);
+}
+
+[data-theme="theme-2"] .toggle-switch-container p {
+  color: var(--very-dark-grayish-yellow);
+}
+
+[data-theme="theme-2"] .switch-toggle {
+  background: var(--grayish-red);
+}
+
+[data-theme="theme-2"] .previous-operand-screen,
+[data-theme="theme-2"] .current-operand-screen {
+  background: var(--very-light-gray);
+  color: var(--very-dark-grayish-yellow);
+}
+
+[data-theme="theme-2"] .calc-body {
+  background: var(--grayish-red);
+}
+
+[data-theme="theme-2"] .number-btn,
+[data-theme="theme-2"] .operand-btn,
+[data-theme="theme-2"] .decimal-btn {
+  background: var(--light-grayish-yellow);
+  color: var(--very-dark-grayish-yellow);
+  box-shadow: 0 5px 0 var(--dark-grayish-orange);
+}
+
+[data-theme="theme-2"] .delete-btn,
+[data-theme="theme-2"] .reset-btn {
+  background: var(--dark-moderate-cyan);
+  box-shadow: 0 5px 0 var(--very-dark-cyan);
+}
+
+[data-theme="theme-2"] .result-btn {
+  background: var(--Orange);
+  box-shadow: 0 5px 0 var(--dark-orange);
+}
+
+[data-theme="theme-2"] .pop-up {
+  background: hsla(0, 0%, 82%, 0.9);
+}
+
+/******************** theme 3 ********************/
+[data-theme="theme-3"] {
+  background: var(--very-dark-violet-main);
+}
+
+[data-theme="theme-3"] .calc-heading {
+  color: var(--light-yellow);
+}
+
+[data-theme="theme-3"] .theme-num-container p {
+  color: var(--light-yellow);
+}
+
+[data-theme="theme-3"] .toggle-switch-container p {
+  color: var(--light-yellow);
+}
+
+[data-theme="theme-3"] .switch-toggle {
+  background: var(--very-dark-violet);
+}
+
+[data-theme="theme-3"] .previous-operand-screen,
+[data-theme="theme-3"] .current-operand-screen {
+  background: var(--very-dark-violet);
+  color: var(--light-yellow);
+}
+
+[data-theme="theme-3"] .calc-body {
+  background: var(--very-dark-violet);
+}
+
+[data-theme="theme-3"] .number-btn,
+[data-theme="theme-3"] .operand-btn,
+[data-theme="theme-3"] .decimal-btn {
+  background: var(--very-dark-violet-key);
+  color: var(--light-yellow);
+  box-shadow: 0 5px 0 var(--dark-magenta-key-shadow-3);
+}
+
+[data-theme="theme-3"] .delete-btn,
+[data-theme="theme-3"] .reset-btn {
+  background: var(--dark-violet);
+  box-shadow: 0 5px 0 var(--vivid-magenta);
+}
+
+[data-theme="theme-3"] .result-btn {
+  color: var(--very-dark-blue);
+  background: var(--pure-cyan);
+  box-shadow: 0 5px 0 var(--soft-cyan);
+}
+
+/*************************** for devices with width of 600px or less *********************/
+@media only screen and (max-width: 600px) {
+  body {
+    min-height: 105vh;
+  }
+  .header {
+    width: 95%;
+  }
+  .screen-container {
+    margin: 30px 0 30px;
+    width: 95%;
+  }
+
+  .previous-operand-screen,
+  .current-operand-screen {
+    width: 100%;
+  }
+  .calc-body {
+    width: 95%;
+    grid-gap: 25px;
+    padding: 35px;
+  }
+
+  .pop-up {
+    width: 300px;
+
+    right: 50%;
+    transform: translate(50%, 50%);
+  }
+  .active {
+    bottom: 50% !important;
+  }
+}
+
+/*************************** for devices with width of 600px or less *********************/
+@media only screen and (max-width: 450px) {
+  body {
+    min-height: 100vh;
+  }
+  .calc-body {
+    grid-gap: 20px;
+    padding: 20px;
+  }
+}
+
+/*************************** for devices with height of 600px or less *********************/
+@media only screen and (max-height: 700px) {
+  body {
+    min-height: 120vh;
+  }
+}
